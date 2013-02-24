@@ -6,4 +6,7 @@ example/example.css: example/example.scss greed.scss
 server:
 	python -mSimpleHTTPServer 8000
 
-.PHONY: example server
+gh-pages:
+	git push origin master:gh-pages
+
+.PHONY: example server gh-pages
