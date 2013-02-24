@@ -21,6 +21,9 @@ body {
   font: normal 16px sans-serif;
   color: #1a1a1a;
 }
+body a {
+  color: #1a1a1a;
+}
 header h1 {
   font-size: 3em;
   margin: 0;
@@ -29,9 +32,41 @@ header h2 {
   margin-top: 0;
   color: #d3d3d3;
 }
+@media screen and (max-width: 500px) {
+  header {
+    text-align: center;
+  }
+}
 [role=main] {
   margin: 0 auto;
   max-width: 1200px;
+}
+.fork-me {
+  border: 0;
+  font-size: .8em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.fork-me span {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .fork-me {
+    display: block;
+    position: inherit;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .fork-me img {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .fork-me span {
+    display: inline;
+  }
 }
 .fourth, .full, .half, .third, .two-thirds {
   background-color: grey;

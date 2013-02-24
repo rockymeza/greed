@@ -1,8 +1,16 @@
 @import "greed";
 
+/* Example site styles */
+
+$black: #1a1a1a;
+
 body {
   font: normal 16px sans-serif;
-  color: #1a1a1a;
+  color: $black;
+
+  a {
+    color: $black;
+  }
 }
 
 header {
@@ -14,6 +22,10 @@ header {
     margin-top: 0;
     color: lightgrey;
   }
+
+  @media screen and (max-width: 500px) {
+    text-align: center;
+  }
 }
 
 [role=main] {
@@ -22,6 +34,29 @@ header {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.fork-me {
+  border: 0;
+  font-size: .8em;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  span {
+    display: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    display: block;
+    position: inherit;
+    text-align: center;
+
+    img { display: none; }
+    span { display: inline; }
+  }
+}
+
+/* Greed styles */
 
 %module {
   background-color: grey;
@@ -40,7 +75,6 @@ header {
 {
   @extend %module;
 }
-
 
 .fourth {
   @include greed(25%);
