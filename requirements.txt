@@ -1,0 +1,1 @@
+-e git://github.com/Kronuz/pyScss@1c4335b1e38908eb77563028edd501c435d18642#egg=pyscss

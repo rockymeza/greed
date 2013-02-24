@@ -1,0 +1,86 @@
+@import "greed";
+
+body {
+  font: normal 16px sans-serif;
+  color: #1a1a1a;
+}
+
+header {
+  h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  h2 {
+    margin-top: 0;
+    color: lightgrey;
+  }
+}
+
+[role=main] {
+  @extend %greed-container;
+
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+%module {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.fourth,
+.third,
+.two-thirds,
+.half,
+.full
+{
+  @extend %module;
+}
+
+
+.fourth {
+  @include greed(25%);
+}
+
+.third {
+  @include greed(100% / 3);
+}
+
+.two-thirds {
+  @include greed(200% / 3);
+}
+
+.half {
+  @include greed(50%);
+}
+
+.full {
+  @include greed(100%);
+}
+
+.responsive {
+  @media screen and (min-width: 1200px) {
+    %module {
+      @include greed(100% / 15);
+    }
+  }
+
+  @media screen and (max-width: 700px) and (min-width: 500px) {
+    .fourth {
+      @include greed(50%);
+    }
+
+    .two-thirds {
+      @include greed(50%);
+    }
+  }
+  @media screen and (max-width: 500px) {
+    %module {
+      @include greed(100%);
+    }
+  }
+}

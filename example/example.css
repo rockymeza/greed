@@ -1,0 +1,98 @@
+[role=main] {
+  *zoom: 1;
+}
+[role=main]:after, [role=main]:before {
+  content: " ";
+  display: table;
+}
+[role=main]:after {
+  clear: both;
+}
+.fourth, .full, .half, .responsive .fourth, .responsive .full,
+.responsive .half, .responsive .third, .responsive .two-thirds,
+.third, .two-thirds {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 0.75%;
+  margin-right: 0.75%;
+}
+body {
+  font: normal 16px sans-serif;
+  color: #1a1a1a;
+}
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+header h2 {
+  margin-top: 0;
+  color: #d3d3d3;
+}
+[role=main] {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.fourth, .full, .half, .third, .two-thirds {
+  background-color: grey;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .responsive .fourth, .responsive .full, .responsive .half, .responsive
+.third, .responsive .two-thirds {
+    clear: none;
+    float: left;
+    width: 5.167%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .responsive .fourth, .responsive .full, .responsive .half, .responsive
+.third, .responsive .two-thirds {
+    clear: both;
+    float: none;
+    width: 98.5%;
+  }
+}
+.fourth {
+  clear: none;
+  float: left;
+  width: 23.5%;
+}
+.third {
+  clear: none;
+  float: left;
+  width: 31.833%;
+}
+.two-thirds {
+  clear: none;
+  float: left;
+  width: 65.167%;
+}
+.half {
+  clear: none;
+  float: left;
+  width: 48.5%;
+}
+.full {
+  clear: both;
+  float: none;
+  width: 98.5%;
+}
+@media screen and (max-width: 700px) and (min-width: 500px) {
+  .responsive .fourth {
+    clear: none;
+    float: left;
+    width: 48.5%;
+  }
+}
+@media screen and (max-width: 700px) and (min-width: 500px) {
+  .responsive .two-thirds {
+    clear: none;
+    float: left;
+    width: 48.5%;
+  }
+}
